@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    problemdetails:
+      enabled: true
+
+  mongodb:
+    host: localhost
+    port: 13500
+    database: filesharedb
+    username: root
+    password: mongodb
+    authentication-database: admin
+    auto-index-creation: true
+
+server:
+  port: 8000
+  forward-headers-strategy: framework
+
