@@ -1,0 +1,21 @@
+spring:
+  mvc:
+    problemdetails:
+      enabled: true
+
+  mongodb:
+    host: localhost
+    port: 13500
+    database: filesharedb
+    username: root
+    password: mongodb
+    authentication-database: admin
+    auto-index-creation: true
+
+server:
+  port: 0
+  forward-headers-strategy: framework
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
