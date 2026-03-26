@@ -19,7 +19,7 @@ spring:
         format_sql: true
 
 server:
-  port: 8001
+  port: 0
   forward-headers-strategy: framework
 
 servlet:
@@ -31,3 +31,7 @@ servlet:
 app:
   storage:
     path: ${user.home}/.ijse/eca/files
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}

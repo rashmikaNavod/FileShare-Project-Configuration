@@ -13,6 +13,9 @@ spring:
     auto-index-creation: true
 
 server:
-  port: 8000
+  port: 0
   forward-headers-strategy: framework
 
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
