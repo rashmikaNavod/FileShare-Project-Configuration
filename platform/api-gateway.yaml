@@ -38,5 +38,8 @@ spring:
 #              - "*"
 #            allowCredentials: true
 
+  codec:
+    max-in-memory-size: 50MB
+
 server:
   port: 7000
